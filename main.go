@@ -8,7 +8,7 @@ import (
 const MaxLength = 9
 
 type SudokuRequest struct {
-	Body [][]int
+	Body [MaxLength][MaxLength]int
 }
 
 func main() {
@@ -33,7 +33,7 @@ func main() {
 
 func initSudokuBody() *SudokuRequest {
 	return &SudokuRequest{
-		Body: [][]int{
+		Body: [MaxLength][MaxLength]int{
 			{0, 2, 0, 0, 0, 0, 0, 0, 0},
 			{0, 0, 1, 0, 0, 9, 7, 0, 0},
 			{4, 0, 3, 0, 0, 0, 8, 0, 0},
